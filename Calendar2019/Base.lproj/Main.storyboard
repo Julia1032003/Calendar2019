@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LDL-o5-cIp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,9 +10,9 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calendar2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -19,6 +20,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="575-1P-j6S">
+            <objects>
+                <viewController id="LDL-o5-cIp" customClass="ViewController" customModule="Calendar2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="goC-k9-b4U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQG-26-Qtj">
+                                <rect key="frame" x="25" y="44" width="364" height="518"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-dC-NCy">
+                                <rect key="frame" x="25" y="562" width="364" height="100"/>
+                            </datePicker>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-ai-lWh">
+                                <rect key="frame" x="68" y="662" width="278" height="32"/>
+                                <connections>
+                                    <action selector="changeValueSlider:" destination="LDL-o5-cIp" eventType="valueChanged" id="Nr4-Fx-OwU"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年初" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpg-NG-E5P">
+                                <rect key="frame" x="25" y="667" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年底" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pM5-eO-atU">
+                                <rect key="frame" x="347" y="667" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ew-L9-h7z">
+                                <rect key="frame" x="184" y="751" width="51" height="31"/>
+                                <connections>
+                                    <action selector="autoplaySwitch:" destination="LDL-o5-cIp" eventType="valueChanged" id="NPw-4F-C9I"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autoplay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsL-xw-ttR">
+                                <rect key="frame" x="252" y="756" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Akw-dC-NCy" secondAttribute="trailing" constant="25" id="2sj-Zz-MG5"/>
+                            <constraint firstItem="LQG-26-Qtj" firstAttribute="top" secondItem="Twi-ii-623" secondAttribute="top" id="BCJ-Ih-rSQ"/>
+                            <constraint firstItem="Cpg-NG-E5P" firstAttribute="centerY" secondItem="NPG-ai-lWh" secondAttribute="centerY" id="CmW-cd-aAl"/>
+                            <constraint firstItem="KsL-xw-ttR" firstAttribute="centerY" secondItem="7Ew-L9-h7z" secondAttribute="centerY" id="DNS-Zt-cmy"/>
+                            <constraint firstItem="pM5-eO-atU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NPG-ai-lWh" secondAttribute="trailing" constant="3" id="EqH-Wg-PkA"/>
+                            <constraint firstItem="Akw-dC-NCy" firstAttribute="top" secondItem="LQG-26-Qtj" secondAttribute="bottom" id="FR9-gZ-ym4"/>
+                            <constraint firstItem="Twi-ii-623" firstAttribute="bottom" secondItem="LQG-26-Qtj" secondAttribute="bottom" constant="300" id="Hy7-Xh-fyq"/>
+                            <constraint firstItem="Cpg-NG-E5P" firstAttribute="leading" secondItem="Akw-dC-NCy" secondAttribute="leading" id="IQU-gg-V3i"/>
+                            <constraint firstItem="Twi-ii-623" firstAttribute="bottom" secondItem="7Ew-L9-h7z" secondAttribute="bottom" constant="80" id="KNz-NR-7Sl"/>
+                            <constraint firstItem="Cpg-NG-E5P" firstAttribute="baseline" secondItem="pM5-eO-atU" secondAttribute="baseline" id="TWK-M8-q8J"/>
+                            <constraint firstItem="Akw-dC-NCy" firstAttribute="leading" secondItem="Twi-ii-623" secondAttribute="leading" constant="25" id="UXe-t0-9VT"/>
+                            <constraint firstItem="Twi-ii-623" firstAttribute="trailing" secondItem="NPG-ai-lWh" secondAttribute="trailing" constant="70" id="W22-hb-Egg"/>
+                            <constraint firstItem="LQG-26-Qtj" firstAttribute="centerX" secondItem="goC-k9-b4U" secondAttribute="centerX" id="WtA-2m-efH"/>
+                            <constraint firstItem="KsL-xw-ttR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7Ew-L9-h7z" secondAttribute="trailing" constant="8" symbolic="YES" id="ccp-zG-cdF"/>
+                            <constraint firstItem="Cpg-NG-E5P" firstAttribute="top" secondItem="Akw-dC-NCy" secondAttribute="bottom" constant="5" id="eu4-90-9Ys"/>
+                            <constraint firstItem="Twi-ii-623" firstAttribute="bottom" secondItem="Akw-dC-NCy" secondAttribute="bottom" constant="200" id="gIV-Nd-Knh"/>
+                            <constraint firstItem="NPG-ai-lWh" firstAttribute="top" secondItem="Akw-dC-NCy" secondAttribute="bottom" id="ksx-jp-fai"/>
+                            <constraint firstItem="Twi-ii-623" firstAttribute="trailing" secondItem="pM5-eO-atU" secondAttribute="trailing" constant="32" id="mRF-vx-u0o"/>
+                            <constraint firstItem="Twi-ii-623" firstAttribute="trailing" secondItem="KsL-xw-ttR" secondAttribute="trailing" constant="95" id="nca-yS-ETD"/>
+                            <constraint firstItem="NPG-ai-lWh" firstAttribute="leading" secondItem="Twi-ii-623" secondAttribute="leading" constant="70" id="y6f-mb-daA"/>
+                            <constraint firstItem="7Ew-L9-h7z" firstAttribute="leading" secondItem="Twi-ii-623" secondAttribute="leading" constant="184" id="yxQ-sS-Xpo"/>
+                            <constraint firstItem="LQG-26-Qtj" firstAttribute="leading" secondItem="Twi-ii-623" secondAttribute="leading" constant="25" id="zO0-mz-pBp"/>
+                            <constraint firstItem="NPG-ai-lWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cpg-NG-E5P" secondAttribute="trailing" constant="8" symbolic="YES" id="zgK-0q-KyF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Twi-ii-623"/>
+                    </view>
+                    <connections>
+                        <outlet property="calendarImageVIew" destination="LQG-26-Qtj" id="puq-Gw-thB"/>
+                        <outlet property="datePicker" destination="Akw-dC-NCy" id="ui1-gQ-2gc"/>
+                        <outlet property="yearSlider" destination="NPG-ai-lWh" id="QUS-da-TfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2y-5P-dun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.85507246376812" y="123.88392857142857"/>
         </scene>
     </scenes>
 </document>
