@@ -23,11 +23,11 @@ class ViewController: UIViewController {
     var timer:Timer?
     var monthcount = 0
     var slidervalue = 0
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // 建立 dateFormatter
         time()
         datePicker.locale = Locale(identifier: "zh_TW")
         dateFormatter.dateFormat = "yyyy/MM/dd"
@@ -50,6 +50,19 @@ class ViewController: UIViewController {
     func time(){
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){(timer)in self.compare()}
     }
+    
+    
+    //DatePicker Action
+    @IBAction func changeImageDatePicker(_ sender: UIDatePicker){
+        let ImageDate = datePicker.date
+        let dateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: ImageDate)
+
+        var month = dateComponents.month!
+        month -= 1
+        calendarImageVIew.image = UIImage(named: monthimage[month])
+       
+    }
+    
     
     //Slider Action
     @IBAction func changeValueSlider(_ sender: UISlider) {
@@ -96,7 +109,8 @@ class ViewController: UIViewController {
         default:
                 dateString = "2019/12/01"
     }
-    let date = dateFormatter.date(from: dateString)
+    //修改datapicker顯示日期
+        let date = dateFormatter.date(from: dateString)
         datePicker.date = date!
         
 }

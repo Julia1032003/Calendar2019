@@ -8,21 +8,6 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calendar2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="139" y="126"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="575-1P-j6S">
             <objects>
                 <viewController id="LDL-o5-cIp" customClass="ViewController" customModule="Calendar2019" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,6 +20,15 @@
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-dC-NCy">
                                 <rect key="frame" x="25" y="562" width="364" height="100"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="567964800">
+                                    <!--2018-12-31 16:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="599497200">
+                                    <!--2019-12-31 15:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changeImageDatePicker:" destination="LDL-o5-cIp" eventType="valueChanged" id="s3W-sH-pCZ"/>
+                                </connections>
                             </datePicker>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-ai-lWh">
                                 <rect key="frame" x="68" y="662" width="278" height="32"/>
